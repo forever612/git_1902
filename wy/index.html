@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>布局</title>
+	<style>
+	    html{
+	    	font:normal 12px 'Microsoft YaHei',serif;
+	    }
+	    body{
+	    	margin: 0;
+	    }
+	    a{
+	    	text-decoration: none;
+	    }
+	    ul{
+	    	margin: 0;
+	    	padding: 0;
+	    	list-style: none;
+	    }
+		.heid{
+			width: 95%;
+			margin: 0 auto;
+		}
+		.top {
+			background-color: #333;
+			color: #ededed;
+		}
+		.top a{
+			color: #ededed;
+		}
+		.top>.heid::after{
+		  content: "";
+		  display: block;
+		  clear: both;	
+		}
+		.top>.heid>div{
+			line-height: 3em;
+		}
+		.top>.heid>.left{
+			float: left;
+		}
+		.top>.heid>.right{
+			float: right;
+		}
+		.top ul.top_nav::after{
+			content: "";
+			display: block;
+			clear: both;
+
+		}
+		.top ul.top_nav>li{
+			float: left;
+			
+			
+		}
+		.top ul.top_nav>li a{
+			display: inline-block;
+			line-height: 1em;
+			width: 70px;
+			text-align: center;
+			border-right: 1px solid #ededed;
+		}
+		.top ul.top_nav>li:last-child a{
+			border: none;
+		}
+		/*搜索栏*/
+		
+		.search{
+			background-color: #fff;
+			height:100px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.search>img{
+			width: 1100px;
+			height: 100px;
+			margin: 0 auto;
+			text-align: center;
+
+		}
+		/*标题搜索*/
+		
+		
+		.tit{
+
+		 }
+		 .zi{
+		 	width: 100%;
+		 }
+		 .tit>.zi>.nav{
+		 	width: 1200px;
+		 	margin: 0 auto;
+		 }
+		 .tit a{
+		 	color: #333;
+		 	font-size: 20px;
+		 	font-weight: bold;
+		 }
+
+		 .tit ul.nav {
+		 	position: relative;
+		 }
+		 .tit ul.nav::after {
+		 	display:block;
+		 	content: "";
+		 	clear: both;
+		 }
+		 /*一级*/
+		 .tit ul.nav >li {
+		 	width: 100px;
+		 	float: left;
+		 	line-height: 3em;
+		 	text-align: center;
+		 }
+		 .tit ul.nav >li >a{
+		 	display: inline-block;
+		 	height: 3em;
+		 	box-sizing: border-box;
+		 }
+		 .tit ul.nav>li:hover> a{
+		 	color: #b4a078;
+		 	border-bottom: 2px solid ;
+		 }
+		 .tit>.zi>ul.nav{
+		 	margin: 0 auto;
+		 	text-align: center;
+		 }
+		 /*二级*/
+		 .tit ul.nav >li:hover>div{
+		 	display: block;
+		 }
+		 .tit ul.nav >li>div {
+		 	border:1px solid #ededed;
+		 	z-index: 1;
+		 	position: absolute;
+		 	height: 300px;
+		 	left: -20%;
+		 	right: -20%;
+		 	top: 100%;
+		 	background-color: #f5f6e1;
+		 	display: none;
+		 }
+		 
+		
+		/*前景*/
+		.qian{
+			width: 100%;
+		}
+		.front{
+			background-color: #ededed;
+			height:500px;
+			width: 1800px;
+			margin: 0 auto;
+		}
+		.front>img{
+			width: 1800px;
+			height: 500px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		/*右边栏*/
+		.right-aside {
+	       width: 100px;
+	       background-color: #fff;
+	       position: fixed;
+	       top: 300px;
+	       right: 0;
+         }
+        .right-aside > div:first-child{
+	        height: 350px;
+
+        }
+        .right-aside > div:first-child>img{
+            width: 100px;
+            height: 350px;
+            margin: 0 auto;
+ 
+        }
+        .right-aside > div {
+	        height: 110px;
+	        border-bottom: 1px solid #fff;
+	        position: relative;
+        }
+        .right-aside > div>p>img{
+        	height: 110px;
+        	width: 100px;
+        	margin: 0 auto;
+        }
+        .right-aside > div:last-child {
+	         border-bottom: 0;
+        }
+
+        .right-aside > div > div {
+	    /*内容*/
+	        position: absolute;
+	        top: 0;
+	        right: 120px;
+	        width: 300px;
+	        height: 300px;
+	        display: none;
+        }
+        .right-aside > div > p:hover+div {
+	       display: block;
+        } 
+		/*左边栏*/
+		.left-aside{
+			width: 100px;
+			background-color: pink;
+			position: fixed;
+			top: 300px;
+			left: 0;
+		}
+		.left-aside>div>img{
+			width: 100px;
+			height: 300px;
+			margin: 0 auto;
+		}
+		/*品牌制造商*/
+		.make{
+			background-color: #fff;
+			height: 500px;
+			width: 100%;
+		}
+		.brank{
+			height: 500px;
+			width: 1200px;
+            margin: 0 auto;
+		}
+		.make>.brank>ul::after{
+			height: 400px;
+			width: 1200px;
+			display: block;
+			clear: both;
+		}
+		/*1200=400+400+20*2+360*2*/
+		.make>.brank>ul>li{
+			float: left;
+			width: 360px;
+			margin-right:20px; 
+			background-color:#96c430;
+		}
+		.make>.brank>ul>li:nth-child(1),
+		.make>.brank>ul>li:nth-child(2){
+			width: 400px;
+			height: 400px;
+			margin-top: 20px;
+		}
+		.make>.brank>ul>li>img{
+			width: 400px;
+			height: 400px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.make>.brank>ul>li:nth-child(3){
+			width: 360px;
+			height: 190px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.make>.brank>ul>li:nth-child(4){
+			width: 360px;
+			height: 190px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+		}
+		.make>.brank>ul>li:nth-child(3)>img{
+			width: 360px;
+			height: 190px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.make>.brank>ul>li:nth-child(4)>img{
+			width: 360px;
+			height: 190px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		/*新品首发*/
+		.new{
+			background-color: #fff;
+			height: 500px; 
+		}
+		.first{
+		    height: 500px;
+			width: 1200px;
+            margin: 0 auto;	
+		}
+		.new>.first>ul::after{
+			height: 400px;
+			width: 1200px;
+		}
+		/*1200=20*3+285*4*/
+		.new>.first>ul>li{
+			float: left;
+			width: 285px;
+			height: 400px;
+			margin-right: 20px;
+			background: #96c430;
+		}
+		.new>.first>ul>li:nth-child(1)
+		.new>.first>ul>li:nth-child(2)
+		.new>.first>ul>li:nth-child(3),
+		{
+			width: 285px;
+			height: 400px;
+			margin-bottom: 20px
+		}
+	    .new>.first>ul>li:nth-child(4){
+	    	margin-right: 0px;
+	    }
+	    .new>.first>ul>li>img{
+	    	width: 285px;
+			height: 400px;
+			margin: 0 auto;
+			text-align: center;
+	    }
+		/*人气推荐*/
+		.recomment{
+			background-color:#fff;
+			height: 700px;
+		}
+		.wrapper{
+			height:620px;
+			width:1200px; 
+			margin: 0 auto; 
+		}
+
+		.recomment>.wrapper>ul ::after {
+			height: 300px;
+			content: "";
+			display: block;
+			clear: both;
+ 
+		}
+		/*1200=450+20*3+230*3*/
+		.recomment>.wrapper>ul>li{
+			float: left;
+			width: 230px;
+			height: 300px;
+			margin-right:20px; 
+			background-color:#96c430;
+		}
+		.recomment>.wrapper>ul>li:nth-child(1){
+			width: 400px;
+			height: 620px;
+			margin-bottom: 20px;
+		}
+		.recomment>.wrapper > ul>li:nth-child(4),		
+		.recomment>.wrapper>ul>li:nth-child(7){
+			margin-right: 0; 
+		}
+		.recomment>.wrapper>ul>li:nth-child(2),
+		.recomment>.wrapper>ul>li:nth-child(3),
+		.recomment>.wrapper>ul>li:nth-child(4){
+			margin-bottom: 20px;
+		}
+		.recomment>.wrapper>ul>li>img{
+			width: 230px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.recomment>.wrapper>ul>li:nth-child(1)>img{
+			width: 400px;
+			height: 620px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		/*限时购*/
+		.xianshi{
+			background-color: #fff;
+			height: 520px;
+		}
+		.buy{
+			height:500px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.xianshi>.buy>img{
+			margin-top: 20px;
+			width: 1200px;
+			height: 400px;
+			
+		}
+		
+		
+		/*居家生活*/
+		.home{
+			background-color: #fff;
+			height: 720px;
+			margin: 0 auto;
+		}
+		.live{
+			height: 650px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.home>.live>ul::after{
+			height: 630px;
+			width: 1200px;
+			display:block;
+			clear: both;; 
+
+		}
+		/*1200=285*4+20*3*/
+		.home>.live>ul>li{
+			float: left;
+			width: 285px;
+			height: 300px;
+			margin-right: 20px;
+			margin-top: 20px;
+			background-color: #96c430;
+		}
+		.home>.live>ul>li:nth-child(1){
+			width: 1200px;
+			height:300px;
+			margin-top: 20px;
+		}
+		.home>.live>ul>li:nth-child(2),
+		.home>.live>ul>li:nth-child(3),
+		.home>.live>ul>li:nth-child(4),{
+			width: 285px;
+			height: 300px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.home>.live>ul>li:nth-child(5){
+			width: 285px;
+			height: 300px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.home>.live>ul>li>img{
+			width: 285px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.home>.live>ul>li:nth-child(1)>img{
+			width: 1200px;
+			height: 300px;
+		}
+		/*服饰鞋包*/
+		.clo{
+			background-color: #fff;
+			height: 720px;
+			margin: 0 auto;
+		}
+		.shoe{
+			height: 650px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.clo>.shoe>ul::after{
+			height: 630px;
+			width: 1200px;
+			display:block;
+			clear: both;; 
+
+		}
+		/*1200=285*4+20*3*/
+		.clo>.shoe>ul>li{
+			float: left;
+			width: 285px;
+			height: 300px;
+			margin-right: 20px;
+			margin-top: 20px;
+			background-color: #96c430;
+		}
+		.clo>.shoe>ul>li:nth-child(1){
+			width: 1200px;
+			height:300px;
+			margin-top: 20px;
+		}
+		.clo>.shoe>ul>li:nth-child(2),
+		.clo>.shoe>ul>li:nth-child(3),
+		.clo>.shoe>ul>li:nth-child(4),{
+			width: 285px;
+			height: 300px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.clo>.shoe>ul>li:nth-child(5){
+			width: 285px;
+			height: 300px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.clo>.shoe>ul>li>img{
+			width: 285px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.clo>.shoe>ul>li:nth-child(1)>img{
+			width: 1200px;
+			height: 300px;
+		}
+		/*美食酒水*/
+		.food{
+			background-color: #fff;
+			height: 720px;
+			margin: 0 auto;
+		}
+		.drink{
+			height: 650px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.food>.drink>ul::after{
+			height: 630px;
+			width: 1200px;
+			display:block;
+			clear: both;; 
+
+		}
+		/*1200=285*4+20*3*/
+		.food>.drink>ul>li{
+			float: left;
+			width: 285px;
+			height: 300px;
+			margin-right: 20px;
+			margin-top: 20px;
+			background-color: #96c430;
+		}
+		.food>.drink>ul>li:nth-child(1){
+			width: 1200px;
+			height:300px;
+			margin-top: 20px;
+		}
+		.food>.drink>ul>li:nth-child(2),
+		.food>.drink>ul>li:nth-child(3),
+		.food>.drink>ul>li:nth-child(4),{
+			width: 285px;
+			height: 300px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.food>.drink>ul>li:nth-child(5){
+			width: 285px;
+			height: 300px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.food>.drink>ul>li>img{
+			width: 285px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.food>.drink>ul>li:nth-child(1)>img{
+			width: 1200px;
+			height: 300px;
+		}
+		/*个人清洁*/
+		.person{
+			background-color: #fff;
+			height: 720px;
+			margin: 0 auto;
+		}
+		.clean{
+			height: 650px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.person>.clean>ul::after{
+			height: 630px;
+			width: 1200px;
+			display:block;
+			clear: both;; 
+
+		}
+		/*1200=285*4+20*3*/
+		.person>.clean>ul>li{
+			float: left;
+			width: 285px;
+			height: 300px;
+			margin-right: 20px;
+			margin-top: 20px;
+			background-color: #96c430;
+		}
+		.person>.clean>ul>li:nth-child(1){
+			width: 1200px;
+			height:300px;
+			margin-top: 20px;
+		}
+		.person>.clean>ul>li:nth-child(2),
+		.person>.clean>ul>li:nth-child(3),
+		.person>.clean>ul>li:nth-child(4),{
+			width: 285px;
+			height: 300px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.person>.clean>ul>li:nth-child(5){
+			width: 285px;
+			height: 300px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.person>.clean>ul>li>img{
+			width: 285px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.person>.clean>ul>li:nth-child(1)>img{
+			width: 1200px;
+			height: 300px;
+		}
+		/*母婴亲子*/
+		.month{
+			background-color: #fff;
+			height: 720px;
+			margin: 0 auto;
+		}
+		.son {
+			height: 650px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.month>.son>ul::after{
+			height: 630px;
+			width: 1200px;
+			display:block;
+			clear: both;; 
+
+		}
+		/*1200=285*4+20*3*/
+		.month>.son>ul>li{
+			float: left;
+			width: 285px;
+			height: 300px;
+			margin-right: 20px;
+			margin-top: 20px;
+			background-color: #96c430;
+		}
+		.month>.son>ul>li:nth-child(1){
+			width: 1200px;
+			height:300px;
+			margin-top: 20px;
+		}
+		.month>.son>ul>li:nth-child(2),
+		.month>.son>ul>li:nth-child(3),
+		.month>.son>ul>li:nth-child(4),{
+			width: 285px;
+			height: 300px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.month>.son>ul>li:nth-child(5){
+			width: 285px;
+			height: 300px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.month>.son>ul>li>img{
+			width: 285px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.month>.son>ul>li:nth-child(1)>img{
+			width: 1200px;
+			height: 300px;
+		}
+		/*运动旅行*/
+		.exe{
+			background-color: #fff;
+			height: 720px;
+			margin: 0 auto;
+		}
+		.tra{
+			height: 650px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.exe>.tra>ul::after{
+			height: 630px;
+			width: 1200px;
+			display:block;
+			clear: both;; 
+
+		}
+		/*1200=285*4+20*3*/
+		.exe>.tra>ul>li{
+			float: left;
+			width: 285px;
+			height: 300px;
+			margin-right: 20px;
+			margin-top: 20px;
+			background-color: #96c430;
+		}
+		.exe>.tra>ul>li:nth-child(1){
+			width: 1200px;
+			height:300px;
+			margin-top: 20px;
+		}
+		.exe>.tra>ul>li:nth-child(2),
+		.exe>.tra>ul>li:nth-child(3),
+		.exe>.tra>ul>li:nth-child(4),{
+			width: 285px;
+			height: 300px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.exe>.tra>ul>li:nth-child(5){
+			width: 285px;
+			height: 300px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.exe>.tra>ul>li>img{
+			width: 285px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.exe>.tra>ul>li:nth-child(1)>img{
+			width: 1200px;
+			height: 300px;
+		}
+		/*数码家电*/
+		.dig{
+			background-color: #fff;
+			height: 720px;
+			margin: 0 auto;
+		}
+		.app{
+			height: 650px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.dig>.app>ul::after{
+			height: 630px;
+			width: 1200px;
+			display:block;
+			clear: both;; 
+
+		}
+		/*1200=285*4+20*3*/
+		.dig>.app>ul>li{
+			float: left;
+			width: 285px;
+			height: 300px;
+			margin-right: 20px;
+			margin-top: 20px;
+			background-color: #96c430;
+		}
+		.dig>.app>ul>li:nth-child(1){
+			
+			width: 1200px;
+			height:300px;
+			margin-top: 20px;
+		}
+		.dig>.app>ul>li:nth-child(2),
+		.dig>.app>ul>li:nth-child(3),
+		.dig>.app>ul>li:nth-child(4),{
+			width: 285px;
+			height: 300px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.dig>.app>ul>li:nth-child(5){
+			width: 285px;
+			height: 300px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.dig>.app>ul>li>img{
+			width: 285px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.dig>.app>ul>li:nth-child(1)>img{
+			width: 1200px;
+			height: 300px;
+		}
+		/*全球特色*/
+		.glo{
+			background-color: #fff;
+			height: 720px;
+			margin: 0 auto;
+		}
+		.spe{
+			height: 650px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.glo>.spe>ul::after{
+			height: 630px;
+			width: 1200px;
+			display:block;
+			clear: both;; 
+
+		}
+		/*1200=285*4+20*3*/
+		.glo>.spe>ul>li{
+			float: left;
+			width: 285px;
+			height: 300px;
+			margin-right: 20px;
+			margin-top: 20px;
+			background-color: #96c430;
+		}
+		.glo>.spe>ul>li:nth-child(1){
+			width: 1200px;
+			height:300px;
+			margin-top: 20px;
+		}
+		.glo>.spe>ul>li:nth-child(2),
+		.glo>.spe>ul>li:nth-child(3),
+		.glo>.spe>ul>li:nth-child(4),{
+			width: 285px;
+			height: 300px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.glo>.spe>ul>li:nth-child(5){
+			width: 285px;
+			height: 300px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.glo>.spe>ul>li>img{
+			width: 285px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.glo>.spe>ul>li:nth-child(1)>img{
+			width: 1200px;
+			height: 300px;
+		}
+		/*甄选家*/
+		.select{
+			background-color: #fff;
+			height: 720px;
+			margin:0 auto;
+		}
+		.ds{
+			height: 650px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.select>.ds>ul::after{
+			height: 630px;
+			width: 1200px;
+			display: block;
+			clear: both;
+		}
+		/*1200=780+20+400*/
+		.select>.ds>ul>li{
+			float: left;
+			width: 400px;
+			height: 305px;
+			margin-right: 20px;
+			margin-top: 20px;
+			background-color: #96c430;
+		}
+		.select>.ds>ul>li:nth-child(1){
+			width: 780px;
+			height: 630px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.select>.ds>ul>li:nth-child(2){
+			width: 400px;
+			height: 305px;
+			margin-right: 0px;
+			margin-top: 20px;
+
+		}
+		.select>.ds>ul>li:nth-child(3){
+			width: 400px;
+			height: 305px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+		}
+		.select>.ds>ul>li>img{
+			width: 400px;
+			height: 305px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.select>.ds>ul>li:nth-child(1)>img{
+			width: 780px;
+			height: 630px;
+		}
+		/*大家都在说*/
+		.every{
+			background-color: #fff;
+			height: 720px;
+			margin: 0 auto;
+		}
+		.speak{
+			height: 650px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.every>.speak>ul::after{
+			height: 630px;
+			width: 1200px;
+			display: block;
+			clear: both;
+		}
+		/*1200=390*3+15*2*/
+		.every>.speak>ul>li{
+			float: left;
+			width: 390px;
+			margin-right: 15px;
+			background-color: #96c430;
+		}
+		.every>.speak>ul>li:nth-child(1),
+		.every>.speak>ul>li:nth-child(2){
+			width: 390px;
+			height: 610px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.every>.speak>ul>li:nth-child(3){
+			width: 390px;
+			height: 610px;
+			margin-right: 0px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+
+		}
+		.every>.speak>ul>li>img{
+			width: 390px;
+			height: 610px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.bottom: {
+			width: 100%;
+		}
+		.tom{
+			background-color: #ededed;
+			height:400px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.bottom>.tom>img{
+			width: 1200px;
+			height: 400px;
+			margin: 0 auto;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+    <!-- 顶端 -->
+	<div class="top">
+	<!-- 宽度1200px -->
+	    <div class="heid">
+	    	<div class="left">用浦发借记卡</div>
+	    	<div class="right">
+	    		<ul class="top_nav">
+	    			<li><a href="">登陆/注册</a></li>
+	    			<li><a href="">我的订单</a></li>
+	    			<li><a href="">会员</a></li>
+	    			<li><a href="">甄选家</a></li>
+	    			<li><a href="">企业求购</a></li>
+	    			<li><a href="">客户服务</a></li>
+	    			<li><a href="">APP</a></li>
+	    		</ul>
+	    	</div>
+	    </div>
+	</div>
+	
+	<!-- 顶端结束 -->
+	<!-- 搜索栏开始 -->
+	<div class="see">
+		<div class="search">
+			<img src="./image/zhengxuanjia_01.png" alt="">
+		</div>
+	</div>
+	<!-- 搜索栏结束 -->
+	<!-- 标题搜索开始 -->
+	<div class="tit">
+		<div class="zi">
+			<ul class="nav">
+				<li><a href="">首页</a></li>
+				<li>
+				<a href="">居家生活</a>
+				   <div>
+				   	 <img src="./image/zhengxuanjia_65.png" alt="">
+				   </div>
+
+				</li>
+				<li>
+				<a href="">服饰鞋包</a>
+				    <div>
+				    	<img src="./image/zhengxuanjia_66.png" alt="">
+				    </div>
+				</li>
+				<li>
+				<a href="">美食酒水</a>
+				    <div>
+				    	<img src="./image/zhengxuanjia_67.png" alt="">
+				    </div>
+				</li>
+				<li>
+				<a href="">个护清洁</a>
+				    <div>
+				    	<img src="./image/zhengxuanjia_68.png" alt="">
+				    </div>
+				</li>
+				<li>
+				<a href="">母婴亲子</a>
+			        <div>
+			        	<img src="./image/zhengxuanjia_69.png" alt="">
+			        </div>
+				</li>
+				<li>
+				<a href="">运动旅行</a>
+				    <div>
+				    	<img src="./image/zhengxuanjia_70.png" alt="">
+				    </div>
+				</li>
+				<li>
+				<a href="">数码家电</a>
+				    <div>
+				    	<img src="./image/zhengxuanjia_71.png" alt="">
+				    </div>
+				</li>
+				<li>
+				<a href="">全球特色</a>
+				    <div>
+				    	<img src="./image/zhengxuanjia_72.png" alt="">
+				    </div>
+				</li>
+				<li><a href="">为你严选</a></li>
+				<li><a href="">众筹</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 标题搜索结束 -->
+	<!-- 前景开始-->
+	<div class="qian">
+		<div class="front">
+			<img src="./image/zhengxuanjia_02.png" alt="">
+		</div>
+	</div>
+	<!-- 前景结束 -->
+	<!-- 右边框 -->
+	<div class="right-aside">
+		<div>
+			<img src="./image/xiao1.png" alt="">
+		</div>
+		<div>
+			<p>
+				<img src="./image/xiao2.png" alt="">
+			</p>
+			<div>
+				<img src="./image/xiao4.png" alt="">
+			</div>
+		</div>
+		<div>
+			<p>
+				<img src="./image/xiao3.png" alt="">
+			</p>
+		</div>
+	</div>
+	<!-- 左边框 -->
+	<div class="left-aside">
+		<div class="two">
+			<img src="./image/xiao5.png" alt="">
+		</div>
+	</div>
+	<!-- 品牌制造开始 -->
+	<div class="make">
+		<div class="brank">
+		<h1>品牌制造商</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_03.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_04.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_05.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_06.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 品牌制造结束 -->
+	<!-- 新品首发开始 -->
+	<div class="new">
+		<div class="first">
+		<h1>新品首发</h1>
+		  <ul>
+			<li>
+				<img src="./image/zhengxuanjia_07.png" alt="">
+			</li>
+			<li>
+				<img src="./image/zhengxuanjia_08.png" alt="">
+			</li>
+			<li>
+				<img src="./image/zhengxuanjia_09.png" alt="">
+			</li>
+			<li>
+				<img src="./image/zhengxuanjia_10.png" alt="">
+			</li>
+		  </ul>
+		</div>
+	</div>
+	<!-- 新品首发结束 -->
+	<!-- 人气推荐开始 -->
+	<div class="recomment">
+		<div class="wrapper">
+		<h1>人气推荐</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_11.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_12.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_13.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_14.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_15.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_16.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_17.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 人气推荐结束-->
+	<!-- 限时购开始 -->
+	<div class="xianshi">
+		<div class="buy">
+		<h1>限时购</h1>
+			<img src="./image/zhengxuanjia_18.png" alt="">
+		</div>
+	</div>
+	<!-- 限时购结束 -->
+	<!-- 居家生活开始 -->
+	<div class="home">
+		<div class="live">
+		<h1>居家生活</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_19.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_20.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_21.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_22.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_23.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 居家生活结束 -->
+	<!-- 服饰鞋包开始 -->
+	<div class="clo">
+		<div class="shoe">
+		<h1>服饰鞋包</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_24.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_25.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_26.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_27.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_28.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 服饰鞋包结束 -->
+	<!-- 美食酒水开始-->
+	<div class="food">
+		<div class="drink">
+		<h1>美食酒水</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_29.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_30.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_31.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_32.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_33.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 美食酒水结束 -->
+	<!-- 个人清洁开始 -->
+	<div class="person">
+		<div class="clean">
+		<h1>个人清洁</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_34.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_35.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_36.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_37.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_38.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- ¸个人清洁结束 -->
+	<!-- 母婴亲子开始 -->
+	<div class="month">
+		<div class="son">
+		<h1>母婴亲子</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_39.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_40.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_41.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_42.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_43.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 母婴亲子结束 -->
+	<!-- 运动旅行开始 -->
+	<div class="exe">
+		<div class="tra">
+		<h1>运动旅行</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_44.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_45.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_46.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_47.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_48.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 运动旅行结束 -->
+	<!-- 数码家电 -->
+	<div class="dig">
+		<div class="app">
+		<h1>数码家电</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_49.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_50.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_51.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_52.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_53.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 数码家电结束-->
+	<!-- 全球特色开始-->
+	<div class="glo">
+		<div class="spe">
+		<h1>全球特色</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_54.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_55.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_56.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_57.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_58.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 全球特色结束 -->
+	<!-- 甄选家-->
+	<div class="select">
+		<div class="ds">
+		<h1>甄选家</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_59.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_60.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_61.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 甄选加结束 -->
+	<!-- 大家都在说 -->
+	<div class="every">
+		<div class="speak">
+		<h1>大家都在说</h1>
+			<ul>
+				<li>
+					<img src="./image/zhengxuanjia_62.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_63.png" alt="">
+				</li>
+				<li>
+					<img src="./image/zhengxuanjia_64.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 大家都在说-->
+    <!-- 底部 -->
+    <div class="bottom">
+    	<div class="tom">
+    		<img src="./image/xiao6.png" alt="">
+    	</div>
+    </div>
+</body>
+</html>
